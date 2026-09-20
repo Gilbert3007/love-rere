@@ -1,0 +1,741 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>May I Be Your Boyfriend?</title>
+
+<style>
+
+/* =========================
+   LATAR BELAKANG
+========================= */
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background: #000000;
+
+    color: white;
+
+    font-family: "Courier New", monospace;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================
+   KOTAK UTAMA
+========================= */
+
+.container {
+
+    width: 700px;
+
+    max-width: 90%;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 10;
+
+}
+
+
+/* =========================
+   LOVE PIXEL
+========================= */
+
+.pixel-heart {
+
+    width: 280px;
+
+    height: 240px;
+
+    margin: auto;
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(14, 20px);
+
+    grid-template-rows:
+    repeat(12, 20px);
+
+    justify-content: center;
+
+    filter:
+    drop-shadow(0 0 10px #ff003c)
+    drop-shadow(0 0 25px #ff003c);
+
+    animation: heartbeat 1s infinite;
+
+}
+
+
+/* BLOK LOVE */
+
+.block {
+
+    width: 20px;
+
+    height: 20px;
+
+    background: #e6002f;
+
+}
+
+
+/* BAGIAN TERANG */
+
+.light {
+
+    background: #ff4565;
+
+}
+
+
+/* BAGIAN GELAP */
+
+.dark {
+
+    background: #9e001f;
+
+}
+
+
+/* ANIMASI */
+
+@keyframes heartbeat {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.05);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* =========================
+   TULISAN
+========================= */
+
+h1 {
+
+    margin-top: 35px;
+
+    margin-bottom: 10px;
+
+    font-size: 42px;
+
+    color: #ffffff;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+    0 0 5px #ff003c,
+    0 0 15px #ff003c;
+
+}
+
+
+.question {
+
+    color: #ff1744;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    text-shadow:
+    0 0 5px #ff003c,
+    0 0 15px #ff003c;
+
+}
+
+
+.subtitle {
+
+    margin-top: 15px;
+
+    color: #888888;
+
+    font-size: 18px;
+
+}
+
+
+/* =========================
+   TOMBOL
+========================= */
+
+.buttons {
+
+    margin-top: 35px;
+
+}
+
+
+button {
+
+    font-family: "Courier New", monospace;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    padding: 15px 45px;
+
+    margin: 10px;
+
+    cursor: pointer;
+
+    border: 4px solid;
+
+}
+
+
+/* YES */
+
+#yes {
+
+    background: #b00028;
+
+    color: white;
+
+    border-color: #ff4565;
+
+    box-shadow:
+    0 0 10px #ff003c;
+
+}
+
+
+#yes:hover {
+
+    background: #e6003c;
+
+    transform: scale(1.05);
+
+}
+
+
+/* NO */
+
+#no {
+
+    background: #333333;
+
+    color: white;
+
+    border-color: #777777;
+
+}
+
+
+#no:hover {
+
+    background: #555555;
+
+}
+
+
+/* =========================
+   PESAN
+========================= */
+
+#message {
+
+    display: none;
+
+    margin-top: 30px;
+
+    font-size: 28px;
+
+    color: #ff1744;
+
+    font-weight: bold;
+
+    text-shadow:
+    0 0 5px #ff003c,
+    0 0 15px #ff003c;
+
+}
+
+
+/* =========================
+   PIXEL LOVE KECIL
+========================= */
+
+.small-heart {
+
+    position: absolute;
+
+    color: #ff1744;
+
+    font-size: 25px;
+
+    animation: floating 5s linear infinite;
+
+}
+
+
+@keyframes floating {
+
+    from {
+
+        transform:
+        translateY(100vh);
+
+    }
+
+    to {
+
+        transform:
+        translateY(-100vh);
+
+    }
+
+}
+
+
+/* =========================
+   UNTUK HP
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .pixel-heart {
+
+        transform: scale(0.7);
+
+        margin-bottom: -50px;
+
+    }
+
+
+    h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .question {
+
+        font-size: 30px;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 15px;
+
+    }
+
+
+    button {
+
+        font-size: 18px;
+
+        padding: 12px 30px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- LOVE KECIL -->
+
+<div class="small-heart"
+style="left:10%;">
+
+♥
+
+</div>
+
+
+<div class="small-heart"
+style="left:30%;">
+
+♥
+
+</div>
+
+
+<div class="small-heart"
+style="left:70%;">
+
+♥
+
+</div>
+
+
+<div class="small-heart"
+style="left:90%;">
+
+♥
+
+</div>
+
+
+<!-- KONTEN UTAMA -->
+
+<div class="container">
+
+
+<!-- LOVE PIXEL -->
+
+<div class="pixel-heart">
+
+
+<!-- BARIS 1 -->
+
+<div></div>
+<div></div>
+<div></div>
+
+<div class="block"></div>
+<div class="block"></div>
+
+<div></div>
+
+<div class="block"></div>
+<div class="block"></div>
+
+<div></div>
+
+<div class="block"></div>
+<div class="block"></div>
+
+<div></div>
+
+
+<!-- BARIS 2 -->
+
+<div></div>
+
+<div class="block"></div>
+<div class="light"></div>
+<div class="block"></div>
+<div class="block"></div>
+
+<div></div>
+
+<div class="block"></div>
+<div class="light"></div>
+<div class="block"></div>
+<div class="block"></div>
+
+<div></div>
+
+
+<!-- BARIS 3 -->
+
+<div class="block"></div>
+<div class="light"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+
+<div class="dark"></div>
+
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="light"></div>
+
+
+<!-- BARIS 4 -->
+
+<div class="block"></div>
+<div class="light"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="light"></div>
+
+
+<!-- BARIS 5 -->
+
+<div class="block"></div>
+<div class="block"></div>
+<div class="light"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="light"></div>
+<div class="block"></div>
+<div class="block"></div>
+
+
+<!-- BARIS 6 -->
+
+<div class="block"></div>
+<div class="dark"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="dark"></div>
+<div class="block"></div>
+
+
+<!-- BARIS 7 -->
+
+<div class="dark"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="light"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="light"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="dark"></div>
+
+
+<!-- BARIS 8 -->
+
+<div></div>
+<div class="dark"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="dark"></div>
+
+
+<!-- BARIS 9 -->
+
+<div></div>
+<div></div>
+<div class="dark"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="light"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="dark"></div>
+
+
+<!-- BARIS 10 -->
+
+<div></div>
+<div></div>
+<div></div>
+<div class="dark"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="dark"></div>
+
+
+<!-- BARIS 11 -->
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div class="dark"></div>
+<div class="block"></div>
+
+
+<!-- BARIS 12 -->
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div class="dark"></div>
+
+
+</div>
+
+
+<!-- TULISAN -->
+
+<h1>
+May I Be Your
+</h1>
+
+
+<div class="question">
+Boyfriend?
+</div>
+
+
+<div class="subtitle">
+A little question from my heart...
+</div>
+
+
+<!-- TOMBOL -->
+
+<div class="buttons">
+
+
+<button
+id="yes"
+onclick="yesButton()">
+
+YES
+
+</button>
+
+
+<button
+id="no"
+onclick="noButton()">
+
+NO
+
+</button>
+
+
+</div>
+
+
+<!-- PESAN -->
+
+<div id="message">
+
+YES!
+
+<br><br>
+
+I LOVE YOU
+
+</div>
+
+
+</div>
+
+
+<script>
+
+
+/* =========================
+   TOMBOL YES
+========================= */
+
+function yesButton() {
+
+    document.getElementById(
+        "message"
+    ).style.display = "block";
+
+
+    document.getElementById(
+        "yes"
+    ).innerHTML = "I LOVE YOU";
+
+
+}
+
+
+/* =========================
+   TOMBOL NO BERPINDAH
+========================= */
+
+function noButton() {
+
+    var button =
+        document.getElementById("no");
+
+
+    var x =
+        Math.floor(
+            Math.random() *
+            (window.innerWidth - 150)
+        );
+
+
+    var y =
+        Math.floor(
+            Math.random() *
+            (window.innerHeight - 80)
+        );
+
+
+    button.style.position =
+        "fixed";
+
+
+    button.style.left =
+        x + "px";
+
+
+    button.style.top =
+        y + "px";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+```
